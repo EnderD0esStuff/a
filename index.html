@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <body>
-    <header>
-        Hello, World!
-    </header>
-    <img src="/images/cat.png" alt="test" style="width:128px;height:128px;">
+<div class="bg-image"></div>
+<div class="text">
+    <h1>Howdy! im Ender</h1>
+    <p>i do stuff like 3D model in blockbench uh il add more stuff later</p>
+    </body>
+</div>
     <style>
         html, body{
             position: fixed;
@@ -11,14 +13,27 @@
             left: 0;
             width: 100vw;
             height: 100vh;
+            box-sizing: border-box;
             object-fit: fill;
             z-index: -1;
         }
-        body{
-    background-image: url(images/background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    }
+        *{
+            box-sizing: border-box;
+        }
+        bg-image{
+            background-image: url(images/background.png);
+            filter: blur(8px);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        text{
+            background-color: rgb(175, 238, 238, 0.4);
+            border: 3px solid white;
+            top: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
     </style>
-</body>
+    </body>
