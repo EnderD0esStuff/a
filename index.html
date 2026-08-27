@@ -5,18 +5,20 @@
     </header>
     <img src="/images/cat.png" alt="test" style="width:128px;height:128px;">
     <style>
+        html, body{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: fill;
+            z-index: -1;
+        }
         body{
     background-image: url(images/background.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: fill;
-    z-index: -1;
     }
     </style>
 </body>
