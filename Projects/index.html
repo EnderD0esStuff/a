@@ -168,7 +168,7 @@
     <div class="bg-image"></div>
     <div class="music-player">
         <p style="color: rgb(253, 255, 255);"></p>
-        <audio id="music-audio" autoplay hidden loop onplay="this.currentTime = 0; this.onplay = null;">
+        <audio id="music-audio" muted hidden loop onplay="this.currentTime = 0; this.onplay = null;">
 
             <source src="audios/Toby Fox - Undertale OST Home.mp3" type="audio/mpeg">
         </audio>
@@ -178,15 +178,15 @@
         <h1 class="title-spin">My Projects</h1>
         <p style="color: lightskyblue;">Howdy!! Welcome to my projects page :D</p>
 
-        <h1 style="color: lightblue;">Nothing Here Yet.</h1>
-        <img src="Projects\images\204.jpg">
+        <h1 style="color: lightblue;" >Nothing Here Yet.</h1>
+        <img src="Projects/images/204.jpg" style="width: 100px; height: 200px">
 
         <p style="color: lightskyblue;"><small>Music By Toby Fox </small></p>
-    <div class="Things">
-        <p style="color: lightblue;">Github</p>
-        <p style="color: lightblue;">Reddit</p>
-        <p style="color: lightblue;">Back</p>
-    </div>
+        <div class="Things">
+            <p style="color: lightblue;">Github</p>
+            <p style="color: lightblue;">Reddit</p>
+            <p style="color: lightblue;">Back</p>
+        </div>
         <div class="Icons">
             <a href="https://github.com/EnderDoesStuff">
                 <img src="images/svg/github.svg" style="width: 50; height: 40px" ;>
@@ -198,20 +198,16 @@
                 <img src="images/svg/example.svg" style="width: 50; height: 40px" ;>
             </a>
         </div>
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const audio = document.getElementById('music-audio');
-            const musicButton = document.getElementById('musicButton')
-            const muteIcon = 'images/svg/mute.svg'
-            const unmuteIcon = 'images/svg/unmute.svg'
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const musicButton = document.getElementById('musicButton')
+                const muteIcon = 'images/svg/mute.svg'
+                const unmuteIcon = 'images/svg/unmute.svg'
 
-            if (!audio || !musicButton) {
-                console.log("bro really? ur audio is missing dummy")
-                return;
-            }
-            musicButton.addEventListener('click', () => {
-                audio.play().catch(error => console.log("idiot autoplay got blocked dummy"))
-
+                if (!audio || !musicButton) {
+                    console.log("bro really? ur audio is missing dummy")
+                    return;
+                }
                 audio.currentTime = 0;
 
                 if (audio.muted) {
@@ -225,8 +221,7 @@
                 }
 
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
