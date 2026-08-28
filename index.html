@@ -1,13 +1,7 @@
 <!DOCTYPE html>
-<body>
-<div class="bg-image"></div>
-<div class="text">
-    <h1>Howdy! im Ender</h1>
-    <p>i do stuff like 3D model in blockbench uh il add more stuff later</p>
-    </body>
-</div>
+<head>
     <style>
-        html, body{
+        .html, body{
             position: fixed;
             top: 0;
             left: 0;
@@ -20,20 +14,119 @@
         *{
             box-sizing: border-box;
         }
-        bg-image{
-            background-image: url(images/background.png);
-            filter: blur(8px);
-            background-repeat: no-repeat;
+        .bg-image{
+            background-image: url(images/background.jpg);
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+            height: 100%;
+            background-repeat: repeat;
             background-position: center;
             background-size: cover;
+            position: fixed;
+            animation: slide 10s linear infinite;
+            top: 0;
+            left: 0;
+            width: 215vw;
+            height: 100vh;
+            box-sizing: border-box;
+            object-fit: fill;
+            z-index: -1;
+            
         }
-        text{
-            background-color: rgb(175, 238, 238, 0.4);
-            border: 3px solid white;
+
+        @keyframes slide{
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(-1000px);
+            }
+        }
+        .text{
+            background-color: rgb(175, 238, 238, 0.2);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-shadow: 3px;
+            border: 3px solid rgba(255, 255, 255, 0.653);
+            border-radius: 25px;
+            position: absolute;
             top: 50%;
-            bottom: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
+            padding: 20px;
+        }
+
+        .corner-image-plz{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 300px;
+            height: auto;
+            z-index: 1000;
+            animation: 6s sway ease-in-out infinite ;
+        }
+        @keyframes sway{
+             0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        
+        }
+
+        .scan-lines-yes{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                top, #4b84ff, #56bbff, #333333, #333333 
+                );
+            background-size: 100% 3px;
+        }
+         .title-spin{
+            display: inline-block;
+            animation: spin-title 2s linear infinite;
+            color: white;
+            font-size: 3rem;
+        }
+        @keyframes spin-title {
+            0% {
+                transform: perspective(600px) rotateX(12deg) rotateY(0deg)
+            }
+            50% {
+                transform: perspective(600px) rotateX(12deg) rotateY(180deg);
+            }
+            100% {
+                transform: perspective(600px) rotateX(12deg) rotateY(360deg);
+            }
         }
     </style>
+</head>
+<body>
+<img src="images/sit.png" class="corner-image-plz">
+<div class="scan-lines-yes"></div>
+<div class="bg-image"></div>
+<div class="text">
+    <h1 class="title-spin">EnderDoesStuff</h1>
+    <p style="color: rgba(224, 255, 255, 0.633);">(He/Any) atleast what i go by online.</p>
+    <p style="color: lightskyblue;">Howdy!! I'm Ender, I'm just a idiot who likes to do random stuff in their free time</p>
+    <p style="color: lightskyblue;">Like BlockBench, Sometimes python (AM Garbage AT THAT THO)</p>
+    <p style="color: lightskyblue;">Though, i hardly do html and this is my first main project :P</p>
+    <p style="color: lightskyblue;">uh i have nothing else to say besides i like cats :P</p>
+    <a href="https://github.com/EnderDoesStuff">
+        <img src="images/svg/github.svg" style="width: 50; height: 40px";>
+    </a>
+        <a href="https://www.reddit.com/user/EnderPlaysMC/">
+        <img src="images/svg/reddit.svg" style="width: 50; height: 40px";>
+    </a>
+        <a href="https://cataas.com/cat">
+        <img src="images/svg/example.svg" style="width: 50; height: 40px";>
+    </a>
     </body>
+</div>
