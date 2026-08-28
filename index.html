@@ -184,8 +184,7 @@
         }
         musicButton.addEventListener('click', () => {
         audio.play().catch(error => console.log("idiot autoplay got blocked dummy"))
-        });
-
+       
             if (audio.muted) {
                 audio.muted = false;
                 musicButton.src = unmuteIcon;
@@ -195,7 +194,9 @@
                 musicButton.src = muteIcon;
                 musicButton.alt = 'Muted';
             }
+
         });
+  });
     </script>
 </body>
 
