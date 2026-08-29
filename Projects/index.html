@@ -99,7 +99,7 @@
 
         .title-spin {
             display: inline-block;
-            animation: spin-title 2s linear infinite;
+            animation: spin-title 7s linear infinite;
             color: white;
             font-size: 3rem;
         }
@@ -159,6 +159,27 @@
             padding: 0;
             margin: 0 0 0 0;
         }
+
+        .scroll-box {
+
+            overflow-x: hidden;
+            width: 924px;
+            height: 400px;
+            -webkit-overflow-scrolling: touch;
+            border: 2px;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin-right: auto;
+            text-align: left;
+            gap: 2px;
+            justify-content: left;
+            display: flex;
+        }
+
+        .scroll-box::-webkit-scrollbar {
+            display: block !important;
+            width: 8px;
+        }
     </style>
 </head>
 
@@ -168,18 +189,70 @@
     <div class="bg-image"></div>
     <div class="music-player">
         <p style="color: rgb(253, 255, 255);"></p>
-         <audio id="music-audio" autoplay hidden loop onplay="this.currentTime = 0; this.onplay = null;">
+        <audio id="music-audio" autoplay hidden loop onplay="this.currentTime = 0; this.onplay = null;">
 
-            <source src="audios/Toby Fox - Undertale OST Home.mp3" type="audio/mpeg">
+            <source src="audios/uwa-so-holiday.mp3" type="audio/mpeg">
         </audio>
         <img id="musicButton" src="images/svg/mute.svg" style="cursor: pointer;" width="40" height="40">
     </div>
     <div class="text">
         <h1 class="title-spin">My Projects</h1>
-        <p style="color: lightskyblue;">Howdy!! Welcome to my projects page :D</p>
+        <p style="color: lightskyblue;"><b>Howdy!! Welcome to my projects page :D</b></p>
 
-        <h1 style="color: lightblue;">Nothing Here Yet.</h1>
-        <img src="https://enderdoesstuff.github.io/Projects/images/204.jpg" style="width: 400px; height: 300px">
+        <div class="scroll-box" style="display: flex; flex-direction: column; gap: 40px; width: 100%;">
+            <div style="grid-column: 1 / 3; display: flex; align-items: flex-start; gap: 20px; margin-bottom: 30px;">
+
+                <video width="300" height="170" controls>
+                    <source src="videos/2026-08-10 22-31-52 (1) (1).mp4">
+                </video>
+                <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
+                    This is somthing i decided to make when i was bored and decided to learn pygame and python-vlc and
+                    the creator of the video i used was by fighter, and if i ever release this it will be without the video because yea.
+                    <br>
+                    <b><a style="color: aqua;" href="https://www.youtube.com/@fighter_suti7">fighter's youtube
+                            channel</a></b>
+                </p>
+            </div>
+
+
+            <div style="grid-column: 1 / 3; display: flex; justify-content: flex-end; gap: 20px; text-align: right; margin-bottom: 30px;">
+                <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
+                    Heres a little avatar i made for customizable player models and figura mod for 
+                    minecraft inside blockbench it took like 2-3 days to actually finish though :D
+                </p>
+
+                <img src="images/avatar1.png" width="180" height="270" style="display: block; flex-shrink: 0;">
+            </div>
+
+            <div style="grid-column: 1 / 3; display: flex; justify-content: flex-start; gap: 20px; text-align: left; margin-bottom: 30px;">
+                <img src="images/avatar2.png" width="180" height="270" style="display: block; flex-shrink: 0;">
+                <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
+                    This avater i made was my attempt at making the secret agent from the game on
+                     roblox animal hospital after someone on discord convinced me to try to make this
+                     <br>
+                    <b><a style="color: aqua;" href="https://www.roblox.com/games/78515283254292/Animal-Hospital">The Game.</a></b>
+                </p>
+            </div>
+            <div style="grid-column: 1 / 3; display: flex; justify-content: flex-end; gap: 20px; text-align: right; margin-bottom: 30px;">
+                <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
+                    This is a hat i made for figura that is pretty much just antenna's with headphones as far as i can remember
+                     i made this when i first started out on making cosmetics
+                </p>
+
+                <img src="images/hat1.png" width="180" height="270" style="display: block; flex-shrink: 0;">
+            </div>
+           <div style="grid-column: 1 / 3; display: flex; justify-content: flex-start; gap: 20px; text-align: left; margin-bottom: 30px;">
+                <img src="images/hat2.png" width="200" height="270" style="display: block; flex-shrink: 0;">
+                <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
+                    This is the first cosmetic i made for the mod figura, note i have no
+                     plans as of writing this to make anymore of these hats but you can find the rest of my cosmetics on my github page :D
+                     <br>
+                </p>
+            </div>
+                    <p style="color: lightskyblue; text-align: center;"><b>More will be added soon...</b></p>
+            </div>
+
+
 
         <p style="color: lightskyblue;"><small>Music By Toby Fox </small></p>
         <div class="Things">
@@ -194,7 +267,7 @@
             <a href="https://www.reddit.com/user/EnderPlaysMC/">
                 <img src="images/svg/reddit.svg" style="width: 50; height: 40px" ;>
             </a>
-            <a href="Https://enderdoesstuff.github.io">
+            <a href="../index.html">
                 <img src="images/svg/example.svg" style="width: 50; height: 40px" ;>
             </a>
         </div>
