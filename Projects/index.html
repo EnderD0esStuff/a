@@ -178,7 +178,7 @@
         <h1 class="title-spin">My Projects</h1>
         <p style="color: lightskyblue;">Howdy!! Welcome to my projects page :D</p>
 
-        <h1 style="color: lightblue;" >Nothing Here Yet.</h1>
+        <h1 style="color: lightblue;">Nothing Here Yet.</h1>
         <img src="https://enderdoesstuff.github.io/Projects/images/204.jpg" style="width: 400px; height: 300px">
 
         <p style="color: lightskyblue;"><small>Music By Toby Fox </small></p>
@@ -208,18 +208,24 @@
                     console.log("bro really? ur audio is missing dummy")
                     return;
                 }
-                audio.currentTime = 0;
 
-                if (audio.muted) {
-                    audio.muted = false;
-                    musicButton.src = unmuteIcon;
-                    musicButton.alt = 'unmuted';
-                } else {
-                    audio.muted = true;
-                    musicButton.src = muteIcon;
-                    musicButton.alt = 'Muted';
-                }
+                musicButton.addEventListener('click', () => {
+                    audio.play().catch(error => console.log("idiot autoplay got blocked dummy"))
 
+
+                    audio.currentTime = 0;
+
+                    if (audio.muted) {
+                        audio.muted = false;
+                        musicButton.src = unmuteIcon;
+                        musicButton.alt = 'unmuted';
+                    } else {
+                        audio.muted = true;
+                        musicButton.src = muteIcon;
+                        musicButton.alt = 'Muted';
+                    }
+
+                });
             });
         </script>
 </body>
