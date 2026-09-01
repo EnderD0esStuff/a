@@ -10,185 +10,7 @@
     <meta property="og:url" content="https://enderdoesstuff.github.io" />
     <meta property="og:image" content="https://enderdoesstuff.github.io/images/cat.png" />
     <meta name="theme-color" content="#AEC6CF" />
-
-    <style>
-        .html,
-        body {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            box-sizing: border-box;
-            object-fit: fill;
-            z-index: -1;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .bg-image {
-            background-image: url(images/background.jpg);
-            filter: blur(2.8px);
-            -webkit-filter: blur(2px);
-            height: 100%;
-            background-repeat: repeat;
-            background-position: center;
-            background-size: cover;
-            position: fixed;
-            animation: slide 10s linear infinite;
-            top: 0;
-            left: 0;
-            width: 215vw;
-            height: 100vh;
-            box-sizing: border-box;
-            object-fit: fill;
-            z-index: -1;
-
-        }
-
-        @keyframes slide {
-            0% {
-                transform: translateX(0px);
-            }
-
-            100% {
-                transform: translateX(-1000px);
-            }
-        }
-
-        .text {
-            background-color: rgb(175, 238, 238, 0.2);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-shadow: 3px;
-            border: 3px solid rgba(255, 255, 255, 0.653);
-            border-radius: 25px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            padding: 20px;
-        }
-
-        .corner-image-plz {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 300px;
-            height: auto;
-            z-index: 1000;
-            animation: 6s sway ease-in-out infinite;
-        }
-
-        @keyframes sway {
-            0% {
-                transform: translateY(0px) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-15px) rotate(5deg);
-            }
-
-            100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-
-
-        }
-
-        .title-spin {
-            display: inline-block;
-            animation: spin-title 7s linear infinite;
-            color: white;
-            font-size: 3rem;
-        }
-
-        @keyframes spin-title {
-            0% {
-                transform: perspective(600px) rotateX(12deg) rotateY(0deg)
-            }
-
-            50% {
-                transform: perspective(600px) rotateX(12deg) rotateY(180deg);
-            }
-
-            100% {
-                transform: perspective(600px) rotateX(12deg) rotateY(360deg);
-            }
-        }
-
-        .music-player {
-            position: fixed;
-            bottom: 24px;
-            left: 24px;
-            z-index: 9999;
-            display: flex;
-            padding: 8px;
-            border-radius: 30;
-            background-color: rgb(175, 238, 238, 0.2);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-shadow: 3px;
-            border: 3px solid rgba(255, 255, 255, 0.653);
-            border-radius: 25px;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .music-player-audio {
-            height: 40px;
-            width: 260px;
-            gap: 20;
-        }
-
-        .Icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            padding: 0px;
-            margin: 0 0 -10px;
-        }
-
-        .Things {
-            display: flex;
-            justify-content: center;
-            grid-template-columns: repeat(3, 120px);
-            align-items: center;
-            gap: 25px;
-            padding: 0;
-            margin: 0 0 0 0;
-        }
-
-        .scroll-box {
-
-            overflow-x: hidden;
-            width: 924px;
-            height: 400px;
-            -webkit-overflow-scrolling: touch;
-            border: 2px;
-            border-radius: 3px;
-            box-sizing: border-box;
-            margin-right: auto;
-            text-align: left;
-            gap: 2px;
-            justify-content: left;
-            display: flex;
-        }
-
-        .scroll-box::-webkit-scrollbar {
-            display: block !important;
-            width: 8px;
-        }
-        .corner-text-yes {
-            right: 20px;
-            bottom: 0.3px;
-            color: skyblue;
-            font-family: Arial, Helvetica, sans-serif;
-            position: fixed;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -215,68 +37,84 @@
                 </video>
                 <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
                     This is somthing i decided to make when i was bored and decided to learn pygame and python-vlc and
-                    the creator of the video i used was by fighter, and if i ever release this it will be without the video because yea.
+                    the creator of the video i used was by fighter, and if i ever release this it will be without the
+                    video because yea.
                     <br>
                     <b><a style="color: aqua;" href="https://www.youtube.com/@fighter_suti7">fighter's youtube
                             channel</a></b>
                 </p>
             </div>
 
-           <div style="grid-column: 1 / 3; display: flex; justify-content: flex-start; gap: 20px; text-align: left; margin-bottom: 30px;">
+            <div
+                style="grid-column: 1 / 3; display: flex; justify-content: flex-start; gap: 20px; text-align: left; margin-bottom: 30px;">
                 <img src="images/website.png" width="290" height="200" style="display: block; flex-shrink: 0;">
                 <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
-                    This website was actually like one of the first big personal projects iv worked on, i made this website purely to show what iv done
-                     with coding or models iv done in blockbench :D
+                    This website was actually like one of the first big personal projects iv worked on, i made this
+                    website purely to show what iv done
+                    with coding or models iv done in blockbench :D
                 </p>
             </div>
 
-            <div style="grid-column: 1 / 3; display: flex; justify-content: flex-end; gap: 20px; text-align: right; margin-bottom: 30px;">
+            <div
+                style="grid-column: 1 / 3; display: flex; justify-content: flex-end; gap: 20px; text-align: right; margin-bottom: 30px;">
                 <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
-                    Heres a little avatar i made for customizable player models and figura mod for 
+                    Heres a little avatar i made for customizable player models and figura mod for
                     minecraft inside blockbench it took like 2-3 days to actually finish though :D
                 </p>
 
                 <img src="images/avatar1.png" width="180" height="270" style="display: block; flex-shrink: 0;">
             </div>
 
-            <div style="grid-column: 1 / 3; display: flex; justify-content: flex-start; gap: 20px; text-align: left; margin-bottom: 30px;">
+            <div
+                style="grid-column: 1 / 3; display: flex; justify-content: flex-start; gap: 20px; text-align: left; margin-bottom: 30px;">
                 <img src="images/avatar2.png" width="180" height="270" style="display: block; flex-shrink: 0;">
                 <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
                     This avater i made was my attempt at making the secret agent from the game on
-                     roblox animal hospital after someone on discord convinced me to try to make this
-                     <br>
-                    <b><a style="color: aqua;" href="https://www.roblox.com/games/78515283254292/Animal-Hospital">The Game.</a></b>
+                    roblox animal hospital after someone on discord convinced me to try to make this
+                    <br>
+                    <b><a style="color: aqua;" href="https://www.roblox.com/games/78515283254292/Animal-Hospital">The
+                            Game.</a></b>
                 </p>
             </div>
-            <div style="grid-column: 1 / 3; display: flex; justify-content: flex-end; gap: 20px; text-align: right; margin-bottom: 30px;">
+            <div
+                style="grid-column: 1 / 3; display: flex; justify-content: flex-end; gap: 20px; text-align: right; margin-bottom: 30px;">
                 <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
-                    This is a hat i made for figura that is pretty much just antenna's with headphones as far as i can remember
-                     i made this when i first started out on making cosmetics
+                    This is a hat i made for figura that is pretty much just antenna's with headphones as far as i can
+                    remember
+                    i made this when i first started out on making cosmetics
                 </p>
 
                 <img src="images/hat1.png" width="180" height="270" style="display: block; flex-shrink: 0;">
             </div>
-           <div style="grid-column: 1 / 3; display: flex; justify-content: flex-start; gap: 20px; text-align: left; margin-bottom: 30px;">
+            <div
+                style="grid-column: 1 / 3; display: flex; justify-content: flex-start; gap: 20px; text-align: left; margin-bottom: 30px;">
                 <img src="images/hat2.png" width="200" height="270" style="display: block; flex-shrink: 0;">
                 <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
                     This is the first cosmetic i made for the mod figura, note i have no
-                     plans as of writing this to make anymore of these hats but you can find the rest of my cosmetics on my github page :D
-                     <br>
+                    plans as of writing this to make anymore of these hats but you can find the rest of my cosmetics on
+                    my github page :D
+                    <br>
                 </p>
-           </div>
-             <div style="grid-column: 1 / 3; display: flex; justify-content: flex-end; gap: 20px; text-align: right; margin-bottom: 30px;">
-                <p style="color: rgb(253, 255, 255); margin: 0; max-width: 300px; flex-grow: 1;">
-                    Made this because a friend wanted me to make it, safe to say this is prob one of the worst models iv ever
-                     made for someone, may be wrong though.
-                </p>
-                <img src="images/stupid model.png" width="200" height="200" style="display: block; flex-shrink: 0;">
             </div>
-                    <p style="color: lightskyblue; text-align: center;"><b>More will be added soon...</b></p>
-            </div>
+                        <p style="color: lightblue; text-align: center; margin: 0;">
+                [NEWS ABOUT COMMISSIONS]
+                <br>    
+                i will not be taking any commissions because i currently do not have anything setup for that yet, and i do not feel like overworking myself
+                but this may change in the future :D
+            </p>
+            <p style="color: lightskyblue; text-align: center;">
+                <b>More will be added soon...</b>
+            </p>
+        </div>
 
 
 
-        <p style="color: lightskyblue;"><small>Music By Toby Fox </small></p>
+        <p style="color: lightskyblue; margin: 0;"><small>
+                Music By Toby Fox
+                <br>
+
+                <bold>Consider checking out my other things :P</bold>
+            </small></p>
         <div class="Things">
             <p style="color: lightblue;">Github</p>
             <p style="color: lightblue;">Reddit</p>
@@ -293,39 +131,11 @@
                 <img src="images/svg/example.svg" style="width: 50; height: 40px" ;>
             </a>
         </div>
-        </div>
-        <div class="corner-text-yes"><p>Render by @zackashgamer5203</p></div>
-        <script>
-            window.addEventListener('DOMContentLoaded', () => {
-                const audio = document.getElementById('music-audio');
-                const musicButton = document.getElementById('musicButton')
-                const muteIcon = 'images/svg/mute.svg'
-                const unmuteIcon = 'images/svg/unmute.svg'
-
-                if (!audio || !musicButton) {
-                    console.log("bro really? ur audio is missing dummy")
-                    return;
-                }
-
-                musicButton.addEventListener('click', () => {
-                    audio.play().catch(error => console.log("idiot autoplay got blocked dummy"))
-
-
-                    audio.currentTime = 0;
-
-                    if (audio.muted) {
-                        audio.muted = false;
-                        musicButton.src = unmuteIcon;
-                        musicButton.alt = 'unmuted';
-                    } else {
-                        audio.muted = true;
-                        musicButton.src = muteIcon;
-                        musicButton.alt = 'Muted';
-                    }
-
-                });
-            });
-        </script>
+    </div>
+    <div class="corner-text-yes">
+        <p>Render by @zackashgamer5203</p>
+    </div>
 </body>
+<script src="js/audio-player.js" defer></script>
 
 </html>
